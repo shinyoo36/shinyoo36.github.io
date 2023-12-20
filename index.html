@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>O.O</title>
+  <style>
+    body {
+      background-image: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-2.gif');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    #backgroundContainer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #backgroundContainer img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content h1 {
+      font-size: 64px;
+      color: #ffddf4;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .content img {
+      width: 25%;
+      animation: scale 1s infinite;
+      height: auto;
+    }
+
+    @keyframes scale {
+      0% { transform: scale(1); }
+      35% { transform: scale(1.05); }
+      70% { transform: scale(1); }
+    }
+    
+    #textFirst {
+        background: linear-gradient(to top, #add8e6, #ffe4e1);
+        animation: scale 1s infinite;
+    }
+
+  </style>
+</head>
+<body>
+    <div id="backgroundContainer"></div>
+    <div class="content">
+        <div>
+          <div id="textFirst">
+            <h1>
+              Semangat 
+              <br>Probation Day 14
+              <br>Bentar Lagi LIBURANNNNNN!!!
+            </h1>
+          </div>
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/359fe050-3abb-4764-b470-33c7883ce044/dgk2099-0e694c54-b804-47e8-93db-b17e3ba46e91.png/v1/fit/w_828,h_1304/dora_png_by_agustinsepulvedave_dgk2099-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU3NiIsInBhdGgiOiJcL2ZcLzM1OWZlMDUwLTNhYmItNDc2NC1iNDcwLTMzYzc4ODNjZTA0NFwvZGdrMjA5OS0wZTY5NGM1NC1iODA0LTQ3ZTgtOTNkYi1iMTdlM2JhNDZlOTEucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.WTkX_mvPaRrQ-eOd_uOAHVWNsXusQxPFNvDWWuxEXMk"/>
+        </div>
+      </div>
+
+  <script>
+    const images = [
+      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e495847-db85-490b-8191-28ed3fcdcd9f/dfnplr8-b87df47e-6625-4f22-be50-ea24ac9af2c9.png/v1/fit/w_828,h_622/boots_the_monkey_from_dora_the_explorer__png__by_thortheskunk911_dfnplr8-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvN2U0OTU4NDctZGI4NS00OTBiLTgxOTEtMjhlZDNmY2RjZDlmXC9kZm5wbHI4LWI4N2RmNDdlLTY2MjUtNGYyMi1iZTUwLWVhMjRhYzlhZjJjOS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yv5BWc2cTYG5jfAJuok72GBTMKbGyCDcZXK_8vxMC8o',
+      /* Add more image URLs as needed */
+    ];
+  
+    function changeImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const xPos = Math.floor(Math.random() * window.innerWidth);
+    const yPos = Math.floor(Math.random() * window.innerHeight);
+
+    const backgroundContainer = document.getElementById('backgroundContainer');
+    backgroundContainer.innerHTML = `<img src="${images[randomIndex]}" alt="Background Image" style="left: ${xPos}px; top: ${yPos}px; height: 500px; width: 500px; border-radius: 50%; object-fit: cover;">`;
+
+    const newImage = backgroundContainer.querySelector('img');
+    newImage.onload = () => {
+        newImage.style.opacity = '1';
+    };
+    }
+
+    setInterval(changeImage, 100);
+  </script>
+  
+  
+</body>
+</html>
