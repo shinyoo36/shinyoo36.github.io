@@ -96,7 +96,7 @@
     const yPos = Math.floor(Math.random() * window.innerHeight);
 
     const backgroundContainer = document.getElementById('backgroundContainer');
-    backgroundContainer.innerHTML = `<img src="${images[randomIndex]}" alt="Background Image" style="left: ${xPos}px; top: ${yPos}px; height: 500px; width: 500px; border-radius: 50%; object-fit: cover;">`;
+    backgroundContainer.innerHTML = `<img src="${images[randomIndex]}" alt="Background Image" style="left: ${xPos}px; top: ${yPos}px; height: 500px; width: 500px; object-fit: cover;">`;
 
     const newImage = backgroundContainer.querySelector('img');
     newImage.onload = () => {
